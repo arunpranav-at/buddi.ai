@@ -27,6 +27,6 @@ Output: We are finding lowest E (epsilon) value and its corresponding b1 (beta1)
 ![surface plot output](<Pictures/Screenshot from 2024-05-06 23-17-23.png>)
 
 ## Assignment 2 - 06/05/2024
-
+To be added
 
 
