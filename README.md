@@ -19,7 +19,7 @@ Run the python file with the below code
 ```
 python3 newfunctionfind0605.py
 ```
-Note: The folder path conventions and other details followed are respect to Linux OS, users using Windows OS are required to change file paths and other requirements as needed for Windows OS <br>
+Note: The folder path conventions and other details followed are respect to Linux OS, users using Windows OS are required to change file paths and other requirements as needed for Windows OS. <br>
 
 Output: We are finding lowest E (epsilon) value and its corresponding b1 (beta1) and b2 (beta2) values. We are plotting the surface plot for the same.<br>
 
