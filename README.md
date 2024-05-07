@@ -88,6 +88,6 @@ python3 randomsampler.py
 ```
 Note: The folder path conventions and other details followed are respect to Linux OS, users using Windows OS are required to change file paths and other requirements as needed for Windows OS. <br>
 
-Output: The index of the input frequencies (one based indexing) is printed randomly for n number of times where n is the number of random samples given in input by the user during program execution.<br>
+Output: The index of the input frequencies (one based indexing) is printed along with the sample randomly for n number of times where n is the number of random samples given in input by the user during program execution.<br>
 
 ![assignment3](<Pictures/assignment3.png>)<br>
