@@ -27,8 +27,6 @@ Output: We are finding lowest E (epsilon) value and its corresponding b1 (beta1)
 ![surface plot output](<Pictures/surfaceplot.png>)
 
 ## Assignment 2 - 06/05/2024
-To be added
-
 Problem statement: We are trying to estimate the value of PI using Monty Carlo Simulation <br>
 
 Monty Carlo Simulation: Monte Carlo simulation is a mathematical technique that uses repeated random sampling to predict he likelihood of possible outcomes for an uncertain event. It's also known as the Monte Carlo Method or multiple probability simulation. <br>
