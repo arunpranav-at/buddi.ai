@@ -58,9 +58,11 @@ Note: The folder path conventions and other details followed are respect to Linu
 
 Output: We can understand that more the number of darts thrown, the estimated value of PI gets closer to the actual value of PI. <br>
 
-![montycarlosimulationoutput](<Pictures/montycarlospisimulation.png>)<br>
+![montycarlosimulationoutput](<Pictures/montycarlospisimulation.png>)<br><br><br>
+
 ![outputusinguniformrandomsamples](<Pictures/outputuniformpi.png>)<br>
-![graphusinguniformrandomsamples](<Pictures/pivalueusinguniformrandomsamples.png>)<br>
+![graphusinguniformrandomsamples](<Pictures/pivalueusinguniformrandomsamples.png>)<br><br>
+
 ![outputusingnormalsamples](<Pictures/outputfornormalsamples.png>)<br>
 ![graphusingnormalsamples](<Pictures/graphfornormalsamples.png>)<br>
 
