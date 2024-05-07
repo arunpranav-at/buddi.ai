@@ -32,6 +32,9 @@ cx.set_xlabel('Beta1')
 cx.set_ylabel('Beta2')
 cx.set_zlabel('E values')
 cx.set_title('Surface Plot of E Values for Beta1 and Beta2')
+cx.legend(['E Values'], title='Legend')
+description = "This surface plot shows the E (epsilon) values for different Beta1(b1) and Beta2(b2) values.\nThe minimum E value of 3.784 is found to be at Beta1 = -0.002 and Beta2 = 0.777."
+fig.text(0.5, 0.05, description, ha='center', fontsize=12)
 
 print("The Minimum E value is: ", round(miniesum, 3))
 print("The corresponding beta1 value: ", round(minib1, 3))
