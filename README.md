@@ -67,3 +67,27 @@ Output: We can understand that more the number of darts thrown, the estimated va
 ![graphusingnormalsamples](<Pictures/graphfornormalsamples.png>)<br>
 
 Note: As these are randomly generated, for every experiment the plotted graph and values generated changes.
+
+## Assignment 3 - 07/05/2024
+Problem statement: Build a random sampler which takes in list of frequencies for samples and along with the number of samples to be selected randomly. Use Uniform Random Function generator for this purpose. <br>
+
+Solution: We will use python random module's uniform function random.uniform() to generate a floating value between 0 and 1. The input list will be consisting of frequencies. We will first find the Probability Mass Functions (PMF) list for each frequency in the list. Then we will find the corresponding Cumulative Probability Functions (CMF) list. Then the randomly generated float value from random.uniform() is compared (greater than) each time to print the random sample <br>
+
+Code: Please refer randomsampler.py in Assignment3_0705<br>
+To install required libraries:
+```
+pip install random
+```
+Move into the Assignment3_0705 Directory
+```
+cd Assignment3_0705/
+```
+Run the python file
+```
+python3 randomsampler.py
+```
+Note: The folder path conventions and other details followed are respect to Linux OS, users using Windows OS are required to change file paths and other requirements as needed for Windows OS. <br>
+
+Output: The index of the input frequencies (one based indexing) is printed randomly for n number of times where n is the number of random samples given in input by the user during program execution.<br>
+
+![assignment3](<Pictures/assignment3.png>)<br>

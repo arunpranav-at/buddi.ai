@@ -3,6 +3,7 @@ from mpl_toolkits import mplot3d
 import numpy as np
 import random
 import math
+from scipy.interpolate import make_interp_spline, BSpline
 
 total = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
 pivalues = [0, 0, 0, 0, 0, 0, 0]
@@ -18,9 +19,17 @@ for i in range(total[-1]+1):
         print("Estimated value of pi when number of darts are ", i, "is :", pi)
         pivalues[total.index(i)] = pi
 
+total = np.array(total)
+pivalues = np.array(pivalues)
+xnew = np.linspace(total.min(), total.max()) 
+
+#define spline
+spl = make_interp_spline(total, pivalues, k=3)
+y_smooth = spl(xnew)
+
 fig = plt.figure(figsize =(8, 8))
 plt.axhline(y=math.pi, color = 'black', linestyle='--', label='PI Value with Highest Precision')
-plt.plot(total, pivalues, marker='o', label='Estimated PI Values')
+plt.plot(xnew, y_smooth, marker='o', label='Estimated PI Values')
 plt.xscale('log')
 plt.yscale('linear')
 plt.ylabel('Estimated PI Values')
