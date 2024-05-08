@@ -7,7 +7,7 @@ y1 = [7, 2, 0, 0, 0, 2, 7]
 
 b1 = np.arange(-1, 1, 0.001)
 b2 = np.arange(-1, 1, 0.001)
-fig = plt.figure(figsize =(10, 10))
+fig = plt.figure(figsize =(20, 10))
 grid_x, grid_y = np.meshgrid(b1, b2)
 minib1, minib2, miniesum = 0, 0, 100000
 

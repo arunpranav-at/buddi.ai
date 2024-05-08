@@ -11,7 +11,7 @@ ulst = [-4, -3, -2, -1, 0, 1, 2, 3, 4] #mean values
 slst = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5] #standard deviation values
 colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'pink', 'orange']
 u = 0
-fig = plt.figure(figsize =(8, 8))
+fig = plt.figure(figsize =(20, 10))
 for s in slst:
     x = np.arange(-10, 10, 0.001)
     y = np.vectorize(fun)(x, u, s)
@@ -23,7 +23,7 @@ plt.legend(title='Legend')
 plt.figtext(0.5, 0.01, 'We are plotting normal distribution curve for same mean and different standard deviation values. We observe that the position of peak doesnot change as it is dependent on Mean and height and width of peak changes as it is dependent on Standard Deviation', wrap=True, horizontalalignment='center', fontsize=12)
 
 s = 1
-fig = plt.figure(figsize =(8, 8))
+fig = plt.figure(figsize =(20, 10))
 for u in ulst:
     x = np.arange(-10, 10, 0.001)
     y = np.vectorize(fun)(x, u, s)

@@ -27,7 +27,7 @@ xnew = np.linspace(total.min(), total.max())
 spl = make_interp_spline(total, pivalues, k=3)
 y_smooth = spl(xnew)
 
-fig = plt.figure(figsize =(8, 8))
+fig = plt.figure(figsize =(20, 10))
 plt.axhline(y=math.pi, color = 'black', linestyle='--', label='PI Value with Highest Precision')
 plt.plot(xnew, y_smooth, marker='o', label='Estimated PI Values')
 plt.xscale('log')

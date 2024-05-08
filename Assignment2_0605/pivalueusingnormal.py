@@ -23,7 +23,7 @@ for i in range(total[-1]+1):
         print("Estimated value of pi when number of darts are ", i, "is :", pi)
         pivalues[total.index(i)] = pi
 
-fig = plt.figure(figsize =(8, 8))
+fig = plt.figure(figsize =(20, 10))
 plt.axhline(y=math.pi, color = 'black', linestyle='--', label='PI Value with Highest Precision')
 plt.plot(total, pivalues, marker='o', label='Estimated PI Values')
 plt.xscale('log')
