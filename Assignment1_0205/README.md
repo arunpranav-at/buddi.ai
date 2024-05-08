@@ -20,5 +20,5 @@ Note: The folder path conventions and other details followed are respect to Linu
 
 Output: We are finding lowest E (epsilon) value and its corresponding b1 (beta1) and b2 (beta2) values. We are plotting the surface plot for the same.<br>
 
-![minmax b1 b2 values](<Pictures/assign1output.png>) <br>
-![surface plot output](<Pictures/surfaceplot.png>)
+![minmax b1 b2 values](<../Pictures/assign1output.png>) <br>
+![surface plot output](<../Pictures/surfaceplot.png>)
