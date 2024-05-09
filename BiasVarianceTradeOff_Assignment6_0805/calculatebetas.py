@@ -50,32 +50,8 @@ plot_polynomial(3, 'yellow', 'Degree 3')
 plot_polynomial(4, 'black', 'Degree 4')
 
 plt.legend()
-
-# Plotting Bias Variance Trade Off
-fig = plt.figure(figsize=(20, 10))
-
-xtest, ytest = zip(*list_20_percent)
-def bias_variance_tradeoff(deg):
-    coeffs = calculate_coefficients(xtrain, ytrain, deg)
-    ypred_train = np.sum([coeffs[i] * xtrain**i for i in range(len(coeffs))], axis=0)
-
-    bias = np.mean(np.abs(ytrain - ypred_train))
-    
-    ypred_test = np.sum(coeffs[i] * xtest**i for i in range(len(coeffs)))
-    variance = np.mean(np.abs(ytest - ypred_test))
-    
-    return bias, variance
-
-deg_range = np.arange(1, 10, 1)
-bias_values = []
-variance_values = []
-
-for deg in deg_range:
-    bias, variance = bias_variance_tradeoff(deg)
-    bias_values.append(bias)
-    variance_values.append(variance)
-
-plt.plot(deg_range, bias_values, color='blue', label='Training Error (Bias)')
-plt.plot(deg_range, variance_values, color='red', label='Test Error (Variance)')
-plt.legend()
+plt.title('Graph showing the various polynomial lines with degree 1, 2, 3 and 4 with respect to the training data')
+plt.figtext(0.5, 0.01, 'Figure 1: We can understand that the polynomial with degree 4 almost satisfies most of the points given in the training dataset', wrap=True, horizontalalignment='center', fontsize=12)
+plt.xlabel('X-axis (Data Points\' x coordinates)')
+plt.ylabel('Y-axis (Data Points\' y coordinates)')
 plt.show()

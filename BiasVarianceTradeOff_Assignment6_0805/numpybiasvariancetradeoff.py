@@ -1,7 +1,6 @@
 import numpy as np
 from numpy.polynomial import Polynomial
 import matplotlib.pyplot as plt
-from mpl_toolkits import mplot3d
 import random
 import math
 
@@ -72,6 +71,10 @@ plt.plot(xplot, f4(xplot), color='black', label='Degree 4')
 # plt.plot(xnew, yplot, color='purple', label='Lagrange Polynomial Line')
 
 plt.legend()
+plt.title('Graph showing the various polynomial lines with degree 1, 2, 3 and 4 with respect to the training data')
+plt.figtext(0.5, 0.01, 'Figure 1: We can understand that the polynomial with degree 4 almost satisfies most of the points given in the training dataset', wrap=True, horizontalalignment='center', fontsize=12)
+plt.xlabel('X-axis (Data Points\' x coordinates)')
+plt.ylabel('Y-axis (Data Points\' y coordinates)')
 
 fig = plt.figure(figsize =(20, 10))
 xtrain = np.array(xtrain)
@@ -83,9 +86,9 @@ def biasCalculation(deg):
     ypred = np.vectorize(pdeg)(xtrain)
     return sum(abs(ytrain - ypred))/len(ytrain)
 
-deg = np.arange(1, 20, 1) 
-error = np.vectorize(biasCalculation)(deg)
-plt.plot(deg, error, color='blue', label='Training Error (Bias)')
+deg = np.arange(1, 10, 1) 
+berror = np.vectorize(biasCalculation)(deg)
+plt.plot(deg, berror, color='blue', label='Training Error (Bias)')
 
 xtest, ytest = zip(*list_20_percent)
 xtest = np.array(xtest)
@@ -96,8 +99,13 @@ def varianceCalculation(deg):
     ypred = np.vectorize(pdeg)(xtest)
     return sum(abs(ytest - ypred))/len(ytest)
 
-error = np.vectorize(varianceCalculation)(deg)
-plt.plot(deg, error, color='red', label='Test Error (Variance)')    
+verror = np.vectorize(varianceCalculation)(deg)
+plt.plot(deg, verror, color='red', label='Test Error (Variance)')    
 plt.legend()
+plt.title('Graph showing the Bias and Variance trade off with respect to the training and test data')
+plt.figtext(0.5, 0.01, 'Figure 2: We can understand that the training error decreases as the degree of the polynomial increases and the test error also decreases as the degree of the polynomial increases', wrap=True, horizontalalignment='center', fontsize=12)
+plt.xlabel('Degree of the Polynomial')
+plt.xticks(np.arange(1, 10, 1))
+plt.ylabel('Error (Bias and Variance)')
 plt.show()
 
