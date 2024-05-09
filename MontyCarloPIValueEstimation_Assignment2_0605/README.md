@@ -8,16 +8,16 @@ Solution: Monte Carlo simulation is a statistical technique that can be used to 
 Formula: Value of PI = 4 * ((number of darts fell inside circle) / (number of total darts thrown)). This formula is derived by finding the probablity of dart falling inside circle which is the area of circle divided by the area of square. It is PI*r^2/a^2 where a is the side of the square and r is the radius of the circle. Here r = a/2 as diameter is a when circle is inscribed inside the square. We are taking unit square in this case<br>
 
 Code: To generate random points, we have used two methods - Uniform Random Samples using random.uniform() function and Normal Samples using random.normal(). <br>
-Please refer pivalueusinguniform.py in Assignment2_0605 folder for simulation using Uniform Random Samples<br>
-Please refer pivalueusingnormal.py in Assignment2_0605 folder for simulation using Normal Samples<br>
+Please refer pivalueusinguniform.py in MontyCarloPIValueEstimation_Assignment2_0605 folder for simulation using Uniform Random Samples<br>
+Please refer pivalueusingnormal.py in MontyCarloPIValueEstimation_Assignment2_0605 folder for simulation using Normal Samples<br>
 
 To install required libraries:
 ```
 pip install matplotlib, mpl_toolkits, numpy, math, random
 ```
-Move into the Assignment1_0205 Directory
+Move into the MontyCarloPIValueEstimation_Assignment2_0605
 ```
-cd Assignment2_0605/
+cd MontyCarloPIValueEstimation_Assignment2_0605/
 ```
 Run the python files
 ```

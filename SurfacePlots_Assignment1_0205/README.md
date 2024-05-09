@@ -3,14 +3,14 @@ Problem statement: Input values = [-3, -2, -1, 0, 1, 2, 3] and the corresponding
 
 Solution: We are supposed to form find values of b1 (beta1) and b2 (beta2) such that the Error E (epsilon) value which is the sum of absolute difference for all inputs together is minimum. We are taking the interval of -1 to 1 in intervals 0.001 for both b1 and b2.<br>
 
-Code: Refer newfunctionfind0605.py in Assignment1_0205 folder <br>
+Code: Refer newfunctionfind0605.py in SurfacePlots_Assignment1_0205 folder <br>
 To install required libraries:
 ```
 pip install matplotlib, mpl_toolkits, numpy
 ```
-Move into the Assignment1_0205 Directory
+Move into the SurfacePlots_Assignment1_0205 Directory
 ```
-cd Assignment1_0205/
+cd SurfacePlots_Assignment1_0205/
 ```
 Run the python file
 ```

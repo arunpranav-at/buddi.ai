@@ -8,14 +8,14 @@ def drawSamples(pmfdict: dict[str: float], n: int) -> list[str]:
 and another program randomsampler.py which is an user interactive program. <br>
 We will use python random module's uniform function random.uniform() to generate a floating value between 0 and 1. The input list will be consisting of frequencies. We will first find the Probability Mass Functions (PMF) list for each frequency in the list. Then we will find the corresponding Cumulative Probability Functions (CMF) list. Then the randomly generated float value from random.uniform() is compared (greater than) each time to print the random sample <br>
 
-Code: Please refer randomsampler.py and functionalrandomsampler.py in Assignment3_0705<br>
+Code: Please refer randomsampler.py and functionalrandomsampler.py in RandomSampler_Assignment3_0705<br>
 To install required libraries:
 ```
 pip install random
 ```
-Move into the Assignment3_0705 Directory
+Move into the RandomSampler_Assignment3_07055 Directory
 ```
-cd Assignment3_0705/
+cd RandomSampler_Assignment3_0705/
 ```
 Run the python file as per your requirement
 ```

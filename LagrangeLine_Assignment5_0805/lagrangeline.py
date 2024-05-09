@@ -11,12 +11,20 @@ poly = Polynomial(np.zeros(n))
 for j in range(n):
     k = [k for k in range(n) if k != j]
     roots = -1 * X[k]
-
     sub_poly = Polynomial.fromroots(X[k])
     scale = Y[j] / np.prod(X[j] - X[k])
     sub_poly.coef *= scale
-
-    poly.coef += sub_poly.coef
+    poly.coef += sub_poly.coef    
+    
+    '''
+    def lagrange_coefficients(x, i):        
+        n = len(x)
+        p = 1
+        for j in range(n):
+            if j != i:
+            p *= (x - x[j]) / (x[i] - x[j])
+        return p
+    '''
 
 fig = plt.figure(figsize =(20, 10))
 plt.scatter(X, Y)

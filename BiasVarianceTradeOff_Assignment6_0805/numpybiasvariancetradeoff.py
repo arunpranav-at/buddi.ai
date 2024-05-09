@@ -6,7 +6,7 @@ import random
 import math
 
 #creating 100 data points
-x = np.arange(-5, 5, 0.1)
+x = np.arange(-10, 10, 0.1)
 def pointfun(x):
     return 2*(x**4) - 3*(x**3) + 7*(x**2) - 23*x + 8 + np.random.normal(0, 3)
 y = np.vectorize(pointfun)(x)
@@ -27,7 +27,7 @@ fig = plt.figure(figsize =(20, 10))
 xtrain, ytrain = zip(*list_80_percent)
 plt.scatter(xtrain, ytrain, color='blue', label='Training Data', s = 10)
 
-xplot = np.linspace(-5, 5, 10000)
+xplot = np.linspace(-10, 10, 10000)
 
 # Fit the data with a polynomial of degree 1
 f1 = Polynomial.fit(xtrain, ytrain, 1)
@@ -46,8 +46,8 @@ f4 = Polynomial.fit(xtrain, ytrain, 4)
 plt.plot(xplot, f4(xplot), color='black', label='Degree 4')
 
 # Lagrange Polynomial Line
-X = np.array(xtrain)
-Y = np.array(ytrain)
+# X = np.array(xtrain)
+# Y = np.array(ytrain)
 
 # n = len(X)
 # poly = Polynomial(np.zeros(n))
@@ -61,9 +61,43 @@ Y = np.array(ytrain)
 #     sub_poly.coef *= scale
 
 #     poly.coef += sub_poly.coef
+# yplot = []
+# xnew = []
+# for i in xplot:
+#     if -200<=poly(i)<=2500:
+#         yplot.append(poly(i))
+#         xnew.append(i)
+# yplot = np.array(yplot)
+# xnew = np.array(xnew)
+# plt.plot(xnew, yplot, color='purple', label='Lagrange Polynomial Line')
 
-# plt.plot(xplot, poly(xplot), color='purple', label='Lagrange Polynomial Line')
+plt.legend()
 
+fig = plt.figure(figsize =(20, 10))
+xtrain = np.array(xtrain)
+ytrain = np.array(ytrain)
+
+# Plotting Bias Variance Trade Off
+def biasCalculation(deg):
+    pdeg = Polynomial.fit(xtrain, ytrain, deg)
+    ypred = np.vectorize(pdeg)(xtrain)
+    return sum(abs(ytrain - ypred))/len(ytrain)
+
+deg = np.arange(1, 20, 1) 
+error = np.vectorize(biasCalculation)(deg)
+plt.plot(deg, error, color='blue', label='Training Error (Bias)')
+
+xtest, ytest = zip(*list_20_percent)
+xtest = np.array(xtest)
+ytest = np.array(ytest)
+
+def varianceCalculation(deg):
+    pdeg = Polynomial.fit(xtrain, ytrain, deg)
+    ypred = np.vectorize(pdeg)(xtest)
+    return sum(abs(ytest - ypred))/len(ytest)
+
+error = np.vectorize(varianceCalculation)(deg)
+plt.plot(deg, error, color='red', label='Test Error (Variance)')    
 plt.legend()
 plt.show()
 
