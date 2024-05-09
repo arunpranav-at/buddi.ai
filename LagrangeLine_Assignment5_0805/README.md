@@ -1,4 +1,4 @@
-#Lagrange Polynomial Line - Assignment 5 - 08/05/2024
+# Lagrange Polynomial Line - Assignment 5 - 08/05/2024
 Problem statement: Input values = [-3, -2, -1, 0, 1, 2, 3] and the corresponding Output values = [7, 2, 0, 0, 0, 2, 7]. Our aim is to find a lagrange polynomial function and plot the lagrange line for the same.<br>
 
 Solution: We are supposed to form find the lagrange polynomial and substitute <br>

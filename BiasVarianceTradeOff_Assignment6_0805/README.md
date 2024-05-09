@@ -1,4 +1,4 @@
-#Bias Variance Trade Off - Assignment 6 - 08/05/2024
+# Bias Variance Trade Off - Assignment 6 - 08/05/2024
 Problem statement: Generate (x,y) coordinates using the function 2(x^4) - 3(x^3) + 7(x^2) - 23x + 8 + N(0, 3). Suffle the data, take 80% points as training dataset and 20% points as testing dataset. Plot different polynomial functions with degrees 1, 2, 3, 4 .... and compare Bias(Training Error) Variance(Testing Error) Trade Off<br>
 
 Solution: We are supposed to plot bias and variance for different models which are nothing but the polynomial functions of degrees 1, 2, 3, 4 .... Then compare Bias and Variance<br>
