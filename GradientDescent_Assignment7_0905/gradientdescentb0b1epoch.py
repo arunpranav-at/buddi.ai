@@ -54,7 +54,8 @@ def main():
     epoch = 0 # initialising epoch
     epochlst = [0] # list to store epoch values
     errorlst = [ierror] # list to store error values
-    
+    b0lst = [b0] # list to store b0 values
+    b1lst = [b1] # list to store b1 values
     flag = True # flag to check the convergence
     while flag: # loop until convergence
         # calculating the predicted values using the initial values of b0 and b1
@@ -78,6 +79,10 @@ def main():
         epochlst.append(epoch) 
         # appending the error value to the list
         errorlst.append(error)    
+        # appending the b0 value to the list
+        b0lst.append(b0)
+        # appending the b1 value to the list
+        b1lst.append(b1)
         
         # checking the convergence
         if abs(error - nerror) < 10e-6:
@@ -91,12 +96,15 @@ def main():
     
     # plotting the error vs epoch graph
     fig = plt.figure(figsize=(20,8)) # creating a figure size of 20x8
-    plt.plot(epochlst[5:], errorlst[5:], label = "Mean Square Error") # plotting the graph
+    plt.plot(epochlst, b0lst, label = "b0 values", color = 'r') # plotting the graph for b0 values
+    plt.plot(epochlst, b1lst, label = "b1 values", color = 'b') # plotting the graph for b1 values
     plt.xlabel('Epoch (Number of times the Gradient Descent is carried out) Scale: Linear Scale') # x-axis label
-    plt.ylabel('Error (Mean Square Error) Scale: Linear Scale') # y-axis label
+    plt.ylabel('Beta Values (Coefficients) Scale: Linear Scale') # y-axis label
+    plt.axhline(y=eb0, color='r', linestyle='--', label = "b0 value by Closed Form") # horizontal line for b0 value by closed form
+    plt.axhline(y=eb1, color='b', linestyle='--', label = "b1 value by Closed Form") # horizontal line for b1 value by closed form
     plt.legend(title = "Legend" ) # legend
-    plt.title('Error vs Epoch Graph for Gradient Descent') # title
-    plt.figtext(0.5, 0.01, 'Figure 1: Error vs Epoch Graph. We can understand that the error decreases with increase in number of epochs.', ha='center') # description
+    plt.title('Beta Values vs Epoch Graph for Gradient Descent') # title
+    plt.figtext(0.5, 0.01, 'Figure 1: Beta Values vs Epoch Graph. We can understand that the beta values become accurate with increase in number of epochs.', ha='center') # description
     plt.show() # displaying the plot
     
 
