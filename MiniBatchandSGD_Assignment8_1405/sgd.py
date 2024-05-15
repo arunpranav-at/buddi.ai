@@ -113,7 +113,7 @@ def main():
         plt.plot(epochlst[20:], errortlst[20:], label = "MSE for Testing Dataset, Learning Rate: "+str(lr), color = colorslst[len(colorslst) - i - 1]) # plotting the graph
     plt.xlabel('Epoch (Number of times the Gradient Descent is carried out) Scale: Linear Scale') # x-axis label
     plt.ylabel('Error (Mean Square Error) Scale: Linear Scale') # y-axis label
-    plt.xlim(0, 2) # setting the limits for x-axis
+    plt.xlim(0, 5) # setting the limits for x-axis
     plt.legend(title = "Legend") # legend
     plt.title('Error vs Epoch Graph for Stochastic Gradient Descent') # title
     plt.figtext(0.5, 0.01, 'Figure 1: Error vs Epoch Graph. We can understand that the error decreases with increase in number of epochs.', ha='center') # description
