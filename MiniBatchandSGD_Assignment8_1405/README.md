@@ -35,6 +35,8 @@ Note: The folder path conventions and other details followed are respect to Linu
 Output: Error vs Epoch Graph. We can understand that the error decreases with increase in number of epochs both in Mini Batch Gradient Descent and Stochastic Gradient Descent. <br><br>
 
 Mini Batch Gradient Descent <br>
-![minibatchgradientdescent](<../Pictures/minibatch.png>) <br>
+![minibatchgradientdescent](<../Pictures/minibatchoutput.png>) <br>
+![minibatchgradientdescent](<../Pictures/minibatch.png>) <br><br>
 Stochastic Gradient Descent <br>
+![minibatchgradientdescent](<../Pictures/sgdoutput.png>) <br>
 ![stochasticgradientdescent](<../Pictures/sgd.png>) <br>
