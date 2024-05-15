@@ -105,6 +105,32 @@ def main():
     plt.legend(title = "Legend" ) # legend
     plt.title('Beta Values vs Epoch Graph for Gradient Descent') # title
     plt.figtext(0.5, 0.01, 'Figure 1: Beta Values vs Epoch Graph. We can understand that the beta values become accurate with increase in number of epochs.', ha='center') # description
+    
+    b0lst = np.array(b0lst) # converting the list to numpy array
+    b1lst = np.array(b1lst) # converting the list to numpy array
+    epochlst = np.array(epochlst) # converting the list to numpy array
+    errorlst = np.array(errorlst) # converting the list to numpy array
+    fig = plt.figure(figsize=(20,8)) # creating a figure size of 20x8
+    cx = plt.axes(projection='3d')
+    cx.plot_trisurf(b0lst, b1lst, epochlst, cmap='viridis') # plotting the surface plot
+    cx.set_xlabel('Beta0')
+    cx.set_ylabel('Beta1')
+    cx.set_zlabel('Epochs')
+    cx.set_title('Surface Plot of Beta0 and Beta1 for each Epochs')
+    cx.legend(['b0 and b1 values'], title='Legend')
+    description = "This surface plot shows the different Beta0(b0) and Beta1(b1) values at different Epochs.\nThe increase in Epochs result in accurate Beta0 and Beta1 values."
+    fig.text(0.5, 0.05, description, ha='center', fontsize=12)
+    
+    fig = plt.figure(figsize=(20,8)) # creating a figure size of 20x8
+    cx = plt.axes(projection='3d')
+    cx.plot_trisurf(b0lst, b1lst, errorlst, cmap='viridis') # plotting the surface plot
+    cx.set_xlabel('Beta0')
+    cx.set_ylabel('Beta1')
+    cx.set_zlabel('Error (MSE)')
+    cx.set_title('Surface Plot of Beta0 and Beta1 and MSE')
+    cx.legend(['b0 and b1 values'], title='Legend')
+    description = "This surface plot shows the different Beta0(b0) and Beta1(b1) values with different Errors.\nThe increase in ppochs result in accurate Beta0 and Beta1 values and decrease in error."
+    fig.text(0.5, 0.05, description, ha='center', fontsize=12)
     plt.show() # displaying the plot
     
 
