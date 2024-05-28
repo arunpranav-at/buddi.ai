@@ -73,7 +73,7 @@ def main():
     # Plotting the sigmoid curve
     y_sigmoid = sigmoid(xcoords)
     ysigf = sigmoidf(xcoords)
-    plt.plot(xcoords, y_sigmoid, color='purple', label='Sigmoid Curve')
+    #plt.plot(xcoords, y_sigmoid, color='purple', label='Sigmoid Curve')
     plt.plot(xcoords, ysigf, color='orange', label='Sigmoid Curve with Regression Line')
 
     plt.xlabel('X Coordinates, Scale: Linear')
