@@ -35,7 +35,7 @@ arraySmallImg = (arraySmallImg - np.mean(arraySmallImg)) / np.std(arraySmallImg)
 print("Big Image shape:", arrayBigImg.shape)
 print("Small Image shape:", arraySmallImg.shape)
 
-# Cross-correlate the big image with the small image
+# Convolve the big image with the small image
 result = sp.convolve2d(arrayBigImg, arraySmallImg[::-1, ::-1], mode='same')
 
 # Find the location of the peak in the result
